@@ -1,22 +1,22 @@
 import random
 
 # global variables:
-N=10 # number of problems
-T=3 # maximum number of tries
+N = 10 # number of problems
+T = 3 # maximum number of tries
 
 def main():
-    level=get_level()
-    count_correct=0
+    level = get_level()
+    count_correct = 0
     for i in range(N):
         # create problem
-        prompt,correct_answer=generate_prompt(level)
+        prompt, correct_answer = generate_prompt(level)
         # prompt for answer: the output can be True (correct answer within T tries) or False (otherwise)
-        correct=get_answer(prompt,correct_answer,T)
+        correct = get_answer(prompt, correct_answer, T)
         # update number of correct answers or provide the correct answer
         if correct:
             count_correct += 1
         else:
-            print(prompt,correct_answer)
+            print(prompt, correct_answer)
     # print score
     print("Score:", count_correct)
 
@@ -39,14 +39,14 @@ def generate_integer(level):
 
 # input: string (prompt for user), integer (correct answer), integer (T=maximum number of tries)
 # output: boolean (True is the answer is correct within T tries, and False otherwise) 
-def get_answer(prompt,n,T):
-    tries=0
-    while tries<T:
+def get_answer(prompt, n, T):
+    tries = 0
+    while tries < T:
         ...
 
 # input: string (prompt to user), integer (minimum value for input), integer (maximum value for input)
 # output: integer (user's provided integer between minimum and maximum)
-def get_integer(prompt,Min, Max):
+def get_integer(prompt, Min, Max):
     ...
                 return x
 
