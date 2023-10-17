@@ -23,13 +23,21 @@ def main():
 # input: void
 # output: integer (user provided integer between 1 and 3)
 def get_level():
-    ...
-            return(level)
+    while True:
+        try:
+            level=int(input("Level: "))
+            if level==1 or level==2 or level==3:
+                break
+        except:
+            pass
+    return(level)
 
 # input: integer (level)
 # output: string (prompt for the user, e.g. '3 + 8 = '), integer (correct answer, e.g. 11)
 def generate_prompt(level):
-    ...
+    num1, num2=5, 6
+    correct_answer=num1+num2
+    prompt=str(num1)+' + '+ str(num2)+' = '
     return prompt, correct_answer
 
 # input: integer (level)
