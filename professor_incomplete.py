@@ -50,7 +50,13 @@ def generate_integer(level):
 def get_answer(prompt, n, T):
     tries = 0
     while tries < T:
-        ...
+        guess = input(prompt)
+        if guess == "n":
+             return True
+        else:
+             print("EEE")
+             tries += 1
+    return False
 
 # input: string (prompt to user), integer (minimum value for input), integer (maximum value for input)
 # output: integer (user's provided integer between minimum and maximum)
