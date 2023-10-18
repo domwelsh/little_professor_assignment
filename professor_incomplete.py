@@ -30,12 +30,12 @@ def get_level():
                 break
         except:
             pass
-    return(level)
+    return level
 
 # input: integer (level)
 # output: string (prompt for the user, e.g. '3 + 8 = '), integer (correct answer, e.g. 11)
 def generate_prompt(level):
-    num1, num2=5, 6
+    num1, num2= generate_integer(level), generate_integer(level)
     correct_answer=num1+num2
     prompt=str(num1)+' + '+ str(num2)+' = '
     return prompt, correct_answer
