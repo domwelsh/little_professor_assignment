@@ -50,7 +50,7 @@ def generate_integer(level):
 def get_answer(prompt, n, T):
     tries = 0
     while tries < T:
-        guess = input(prompt)
+        guess = get_integer(prompt)
         if guess == "n":
              return True
         else:
@@ -60,7 +60,9 @@ def get_answer(prompt, n, T):
 
 # input: string (prompt to user), integer (minimum value for input), integer (maximum value for input)
 # output: integer (user's provided integer between minimum and maximum)
-def get_integer(prompt, Min, Max):
+# Dom - I removed (Min, Max) from params because there are no min or max values for input. The
+#   code needs to accept all str's, not just numbers
+def get_integer(prompt):
     ...
                 return x
 
