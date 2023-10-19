@@ -43,7 +43,15 @@ def generate_prompt(level):
 # input: integer (level)
 # output: integer (random number between 0 and 9, or between 10 and 99 or between 100 and 999)
 def generate_integer(level):
-    ...
+    if level == 1:
+        return random.randint(0, 9)
+    #The randint() method returns an integer number selected element from the specified range.
+    elif level == 2:
+        return random.randint(10, 99)
+    elif level == 3:
+        return random.randint(100, 999)
+    else:
+        raise ValueError("Invalid level")
 
 # input: string (prompt for user), integer (correct answer), integer (T=maximum number of tries)
 # output: boolean (True is the answer is correct within T tries, and False otherwise) 
@@ -51,7 +59,7 @@ def get_answer(prompt, n, T):
     tries = 0
     while tries < T:
         guess = get_integer(prompt)
-        if guess == "n":
+        if guess == str(n):
              return True
         else:
              print("EEE")
@@ -63,8 +71,7 @@ def get_answer(prompt, n, T):
 # Dom - I removed (Min, Max) from params because there are no min or max values for input. The
 #   code needs to accept all str's, not just numbers
 def get_integer(prompt):
-    ...
-                return x
+    return input(prompt)
 
 
 # main
