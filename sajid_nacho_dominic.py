@@ -27,10 +27,9 @@ def get_level():
         try:
             level=int(input("Level: "))
             if level==1 or level==2 or level==3:
-                break
-        except:
+                return level
+        except ValueError:
             pass
-    return level
 
 # input: integer (level)
 # output: string (prompt for the user, e.g. '3 + 8 = '), integer (correct answer, e.g. 11)
